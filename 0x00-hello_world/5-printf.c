@@ -1,11 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - main block
- *
- * Description: printf to print a string
- *
- * return 0
+ * main - Print a string
+ * Description: use printf
+ * Return: 0
  */
 
 int main(void)
