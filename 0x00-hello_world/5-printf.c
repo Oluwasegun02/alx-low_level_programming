@@ -3,7 +3,7 @@
 /**
  * main - main block
  *
- * use: printf to print the string of ("%s", "with proper grammar, but the outcome is a piece of art,\n")
+ * Description: printf to print a string
  *
  * return 0
  */
