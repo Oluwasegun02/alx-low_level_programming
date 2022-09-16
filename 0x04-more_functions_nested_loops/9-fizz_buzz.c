@@ -1,12 +1,15 @@
 #include <stdio.h>
 
 /**
- * main - fizz buzz code
+ * main - Fizz Buzz code
+ *
  * Return: void
  */
+
 int main(void)
 {
 	int i = 1;
+
 	while (i <= 100)
 	{
 		if (i % 3 == 0 && i % 5 == 0)
@@ -15,9 +18,9 @@ int main(void)
 		}
 		else if (i % 3 == 0)
 		{
-			printf("Fizz")
+			printf("Fizz");
 		}
-		else if (i % 5 --9)
+		else if (i % 5 == 0)
 		{
 			printf("Buzz");
 		}
@@ -29,8 +32,9 @@ int main(void)
 		{
 			putchar(' ');
 		}
+
 		i++;
 	}
 	putchar('\n');
-	rerturn (0);
+	return (0);
 }
