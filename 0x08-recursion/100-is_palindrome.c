@@ -1,57 +1,46 @@
 #include "main.h"
-
 /**
-* is_palindrome - returns true if the given string is a palindrome
-*@s: string to check
-*Return: true if the given string is a palindrome
+*longitud - function that returns the power of number
+*@s: string
+*
+*Return: length of a string
 */
+int longitud(char *s)
+{
+	int l = 0;
 
+	if (*s != '\0')
+	{
+		l++;
+		return (longitud(s + 1) + l);
+	}
+	return (l);
+}
+/**
+ *comparar - function that returns the power of number
+ *@i: original number
+ *@l: counter to compare multiplication
+ *@s: string
+ *Return: square root
+ */
+int comparar(int i, int l, char *s)
+{
+	if (i >= l)
+		return (1);
+	else if (s[i] == s[l])
+		return (comparar(i + 1, l - 1, s));
+	else
+		return (0);
+}
+/**
+ *is_palindrome - return 1 if is number prime
+ *@s: number to evaluate
+ *Return: 1 or 0
+ */
 int is_palindrome(char *s)
 {
-	int index = 0;
-	int len = find_strlen(s);
+	int l = longitud(s);
+	int i = 0;
 
-	if (!(*s))
-		return (1);
-
-	return (check_palindrome(s, len, index));
-}
-
-/**
- * find_strlen - Returns the length of a string.
- * @s: The string to be measured.
- *
- * Return: The length of the string.
- */
-int find_strlen(char *s)
-{
-	int len = 0;
-
-	if (*(s + len))
-	{
-		len++;
-		len += find_strlen(s + len);
-	}
-
-	return (len);
-}
-
-/**
- * check_palindrome - Checks if a string is a palindrome.
- * @s: The string to be checked.
- * @len: The length of s.
- * @index: The index of the string to be checked.
- *
- * Return: If the string is a palindrome - 1.
- *         If the string is not a palindrome - 0.
- */
-int check_palindrome(char *s, int len, int index)
-{
-	if (s[index] == s[len / 2])
-		return (1);
-
-	if (s[index] == s[len - index - 1])
-		return (check_palindrome(s, len, index + 1));
-
-	return (0);
+	return (comparar(i, l - 1, s));
 }
