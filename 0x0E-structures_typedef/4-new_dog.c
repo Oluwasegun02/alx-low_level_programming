@@ -1,3 +1,8 @@
+/*
+ * File: 4-new_dog.c
+ * Auth: Gedeon Obae Gekonge
+ */
+
 #include "dog.h"
 #include <stdlib.h>
 
@@ -66,7 +71,16 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(doggo);
 		return (NULL);
 	}
-doggo->name = _strcopy(doggo->name, name);
+
+	doggo->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
+	if (doggo->owner == NULL)
+	{
+		free(doggo->name);
+		free(doggo);
+		return (NULL);
+	}
+
+	doggo->name = _strcopy(doggo->name, name);
 	doggo->age = age;
 	doggo->owner = _strcopy(doggo->owner, owner);
 
