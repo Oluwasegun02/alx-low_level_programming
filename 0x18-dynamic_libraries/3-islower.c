@@ -1,22 +1,17 @@
 #include "main.h"
-
+#include <ctype.h>
 /**
- * _islower - Entry point
- * Description: checks is a character is lowercase
- * @c: the integer value it receives
- * Return: 1 if true. 0 if false.
+ * _islower - return one if c is lowercase else return zero
+ *
+ *Return: 0
+ *@c: number for evaluate
  */
 int _islower(int c)
 {
-int i = 'a';
-
-for (i = 'a'; i <= 'z'; i++)
-{
-/* refer int c*/
-if (c == i)
-{
-return (1);
-}
-}
-return (0);
+	if (islower(c) > 0)
+	{
+		return (1);
+	}
+	else
+	return (0);
 }

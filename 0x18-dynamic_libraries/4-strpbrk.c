@@ -1,33 +1,26 @@
 #include "main.h"
 
 /**
-  * _strpbrk - search a string for any of a set of bytes
-  * @s: source string
-  * @accept: accepted characters
-  *
-  * Return: the string since the first found accepted character
-  */
+**_strpbrk - function that count ocurrences of first segmen with accept char
+*@s: string of input
+*@accept: characters that should compare with s
+*Return: the string with coincidences
+*/
+
 char *_strpbrk(char *s, char *accept)
 {
-	int a = 0, b;
+	int i;
 
-	while (s[a])
+	while (*s != ' ')
 	{
-		b = 0;
-
-		while (accept[b])
+		for (i = 0; accept[i] != '\0'; i++)
 		{
-			if (s[a] == accept[b])
+			if (accept[i] == *s)
 			{
-				s += a;
 				return (s);
 			}
-
-			b++;
 		}
-
-		a++;
+		s++;
 	}
-
 	return ('\0');
 }
