@@ -8,4 +8,34 @@ main.o: main.c
 
 school.o: school.c
 	gcc -c school.c -o school.o
+<<<<<<< HEAD
     
+=======
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+-- I
+>>>>>>> 60307bae380a5d44405335c75cc5d5c538bb49d3
